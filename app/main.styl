@@ -1,0 +1,74 @@
+body
+  background-color cornsilk
+  font-family sans-serif
+
+.notes
+  padding 10px
+  margin 0
+
+.note
+  overflow auto
+  margin-bottom 0.5em
+  padding 0.5em
+  background-color #fdfdfd
+  box-shadow 0 0 0.3em .03em rgba(0,0,0,.3)
+  &:hover
+    box-shadow 0 0 0.3em .03em rgba(0,0,0,.7)
+    transition .6s
+    .delete
+      visibility visible
+  .value
+    /* force to use inline-block so that it gets minimum height */
+    display inline-block
+  .editable
+    float left
+  .delete
+    float right
+    padding 0
+    background-color #fdfdfd
+    border none
+    cursor pointer
+    visibility hidden
+
+.lane
+  display inline-block
+  margin 1em
+  background-color #efefef
+  border 1px solid #ccc
+  border-radius 0.5em
+  min-width 10em
+  vertical-align top
+
+.lane-header
+  overflow auto
+  padding 1em
+  color #efefef
+  background-color #333
+  border-top-left-radius 0.5em
+  border-top-right-radius 0.5em
+  &:hover
+    .lane-delete
+      visibility visible
+
+.lane-name
+  float left
+
+.lane-add-note
+  float left
+  margin-right 0.5em
+
+.lane-delete
+  float right
+  margin-left 0.5em
+  visibility hidden
+  button
+    padding 0
+    cursor pointer
+    color white
+    background-color rgba(0, 0, 0, 0)
+    border 0
+
+.add-lane, .lane-add-note button
+  cursor pointer
+  background-color #fdfdfd
+  border 1px solid #ccc
